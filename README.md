@@ -1,2 +1,3 @@
 # ResumeHTML
-Private GitHub Repo to maintain resume
+GitHub Repo to maintain resume
+Template found somewhere on Hackathon Hackers
