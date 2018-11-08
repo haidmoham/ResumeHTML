@@ -6,25 +6,126 @@
     <title>Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,200,700" rel="stylesheet">
-    <style>a,h1,h2,h3,h4,h5,h6,li,p{font-family:Raleway,sans-serif}.resume{background-color:#1f1f1f;min-height:100vh}.resume .main{height:100%;width:700px;background-color:#fff;padding:0 25px;margin:0 auto}.resume .main .header{border-bottom:2px solid #ddd}.resume .main .header .page-title-container{margin:0 auto;text-align:center;padding-bottom:10px}.resume .main .header .page-title{font-size:48pt;display:inline}.resume .main .header .page-title-first{font-weight:400}.resume .main .header .page-title-last{font-weight:200}.resume .main .header .header-icons{text-align:center}.resume .main .header .header-icons .page-subhead{margin:1rem 15px;display:inline}.resume .main .header .fa{padding-right:10px}.resume .main .indented{padding-left:40px}.resume .main .category-row{padding-bottom:2px}.resume .main .category-row .category{margin-right:10px;padding-left:5px;padding-right:10px;border-bottom:1px solid #ddd;border-right:1px solid #ddd}.resume .main .category-row .category-row-title{margin:.4rem 0}.resume .main .category-row .category-subtitle,.resume .main .category-row .category-title{display:inline;margin-top:10px;margin-bottom:5px}.resume .main .category-row .category-bullets{margin-top:5px}.resume .main .category-row li,.resume .main .category-row p{font-size:smaller}category:last-of-type category-item:last-of-type .category,sidebar-category:last-of-type .category{border-bottom:0!important;padding-bottom:0!important;margin-bottom:0!important}</style>
+    <style>
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        li,
+        p {
+            font-family: Raleway, sans-serif
+        }
+
+        .resume {
+            background-color: #1f1f1f;
+            min-height: 100vh
+        }
+
+        .resume .main {
+            height: 100%;
+            width: 700px;
+            background-color: #fff;
+            padding: 0 25px;
+            margin: 0 auto
+        }
+
+        .resume .main .header {
+            border-bottom: 2px solid #ddd
+        }
+
+        .resume .main .header .page-title-container {
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: 10px
+        }
+
+        .resume .main .header .page-title {
+            font-size: 48pt;
+            display: inline
+        }
+
+        .resume .main .header .page-title-first {
+            font-weight: 400
+        }
+
+        .resume .main .header .page-title-last {
+            font-weight: 200
+        }
+
+        .resume .main .header .header-icons {
+            text-align: center
+        }
+
+        .resume .main .header .header-icons .page-subhead {
+            margin: 1rem 15px;
+            display: inline
+        }
+
+        .resume .main .header .fa {
+            padding-right: 10px
+        }
+
+        .resume .main .indented {
+            padding-left: 40px
+        }
+
+        .resume .main .category-row {
+            padding-bottom: 2px
+        }
+
+        .resume .main .category-row .category {
+            margin-right: 10px;
+            padding-left: 5px;
+            padding-right: 10px;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd
+        }
+
+        .resume .main .category-row .category-row-title {
+            margin: .4rem 0
+        }
+
+        .resume .main .category-row .category-subtitle,
+        .resume .main .category-row .category-title {
+            display: inline;
+            margin-top: 10px;
+            margin-bottom: 5px
+        }
+
+        .resume .main .category-row .category-bullets {
+            margin-top: 5px
+        }
+
+        .resume .main .category-row li,
+        .resume .main .category-row p {
+            font-size: smaller
+        }
+
+        category:last-of-type category-item:last-of-type .category,
+        sidebar-category:last-of-type .category {
+            border-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important
+        }
+    </style>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
     <!-- <script src="resume.js"></script> -->
-    <script>"use strict";angular.module("Resume",["ngMaterial"]).directive("resume",function(){return{restrict:"E",transclude:!0,template:'<div class="resume">\n      <section class="main" ng-transclude></section>\n    </div>'}}).directive("resumeHeading",function(){return{restrict:"E",scope:{firstName:"@",lastName:"@",website:"@",phone:"@",email:"@",github:"@",linkedin:"@"},template:'<div class="header">\n      <div class="page-title-container">\n        <h1 class="page-title page-title-first">{{firstName}}</h1>\n        <h1 class="page-title page-title-last">{{lastName}}</h1>\n      </div>\n      <div class="header-icons">\n        <span ng-if="website" class="md-subhead page-subhead"><i class="fa fa-lg fa-code"></i>{{website}}</span>\n        <span ng-if="phone" class="md-subhead page-subhead"><i class="fa fa-lg fa-phone"></i>{{phone}}</span>\n        <span ng-if="email" class="md-subhead page-subhead"><i class="fa fa-lg fa-envelope"></i>{{email}}</span>\n        <span ng-if="github" class="md-subhead page-subhead"><i class="fa fa-lg fa-github"></i>{{github}}</span>\n        <span ng-if="linkedin" class="md-subhead page-subhead"><i class="fa fa-lg fa-linkedin-square"></i>{{linkedin}}</span>\n      </div>\n    </div>'}}).directive("resumeBody",function(){return{restrict:"E",transclude:!0,template:'<div layout="row" ng-transclude></div>'}}).directive("resumeColumn",function(){return{restrict:"E",transclude:!0,template:"<div ng-transclude></div>"}}).directive("sidebarCategory",function(){return{restrict:"E",scope:{name:"@"},transclude:!0,template:'<div flex="" class="category-row">\n      <div class="category">\n        <h5 class="category-row-title">{{name}}</h5>\n        <ng-transclude></ng-transclude>\n      </div>\n    </div>'}}).directive("category",function(){return{restrict:"E",scope:{name:"@"},transclude:!0,template:'<div flex="" class="category-row">\n      <h4 class="category-row-title">{{name}}</h4>\n      <ng-transclude></ng-transclude>\n    </div>'}}).directive("categoryItem",function(){return{restrict:"E",scope:{title:"@",subtitle:"@"},transclude:!0,template:'<div class="category">\n        <h5 class="category-title md-body-2">{{title}}</h5>&nbsp;\n        <h5 class="category-subtitle md-caption">{{subtitle}}</h5>\n        <ul class="category-bullets" ng-transclude></ul>\n    </div>'}});</script>
+    <script>"use strict"; angular.module("Resume", ["ngMaterial"]).directive("resume", function () { return { restrict: "E", transclude: !0, template: '<div class="resume">\n      <section class="main" ng-transclude></section>\n    </div>' } }).directive("resumeHeading", function () { return { restrict: "E", scope: { firstName: "@", lastName: "@", website: "@", phone: "@", email: "@", github: "@", linkedin: "@" }, template: '<div class="header">\n      <div class="page-title-container">\n        <h1 class="page-title page-title-first">{{firstName}}</h1>\n        <h1 class="page-title page-title-last">{{lastName}}</h1>\n      </div>\n      <div class="header-icons">\n        <span ng-if="website" class="md-subhead page-subhead"><i class="fa fa-lg fa-code"></i>{{website}}</span>\n        <span ng-if="phone" class="md-subhead page-subhead"><i class="fa fa-lg fa-phone"></i>{{phone}}</span>\n        <span ng-if="email" class="md-subhead page-subhead"><i class="fa fa-lg fa-envelope"></i>{{email}}</span>\n        <span ng-if="github" class="md-subhead page-subhead"><i class="fa fa-lg fa-github"></i>{{github}}</span>\n        <span ng-if="linkedin" class="md-subhead page-subhead"><i class="fa fa-lg fa-linkedin-square"></i>{{linkedin}}</span>\n      </div>\n    </div>' } }).directive("resumeBody", function () { return { restrict: "E", transclude: !0, template: '<div layout="row" ng-transclude></div>' } }).directive("resumeColumn", function () { return { restrict: "E", transclude: !0, template: "<div ng-transclude></div>" } }).directive("sidebarCategory", function () { return { restrict: "E", scope: { name: "@" }, transclude: !0, template: '<div flex="" class="category-row">\n      <div class="category">\n        <h5 class="category-row-title">{{name}}</h5>\n        <ng-transclude></ng-transclude>\n      </div>\n    </div>' } }).directive("category", function () { return { restrict: "E", scope: { name: "@" }, transclude: !0, template: '<div flex="" class="category-row">\n      <h4 class="category-row-title">{{name}}</h4>\n      <ng-transclude></ng-transclude>\n    </div>' } }).directive("categoryItem", function () { return { restrict: "E", scope: { title: "@", subtitle: "@" }, transclude: !0, template: '<div class="category">\n        <h5 class="category-title md-body-2">{{title}}</h5>&nbsp;\n        <h5 class="category-subtitle md-caption">{{subtitle}}</h5>\n        <ul class="category-bullets" ng-transclude></ul>\n    </div>' } });</script>
 </head>
 
 <body ng-app="Resume" ng-cloak>
     <resume>
-        <resume-heading first-name="Mohammad"
-                        last-name="Haider"
-                        github="haidmoham"
-                        email="haidmoham@gmail.com"
-                        phone="434-270-5977">
+        <resume-heading first-name="Mohammad" last-name="Haider" github="haidmoham" email="haidmoham@gmail.com" phone="434-270-5977">
         </resume-heading>
         <resume-body>
             <resume-column flex="30">
@@ -32,21 +133,22 @@
                     <p>Virginia Tech</p>
                     <p><b>B.S. Statistics</b></p>
                     <p><b>Minor</b> in <b>Computer Science</b></p>
-                    <p>Expected Graduation Dec 2019</p>
+                    <!--<p>Expected Graduation Dec 2019</p>-->
                     <!--<p>GPA - N/A</p> -->
                 </sidebar-category>
                 <sidebar-category name="Languages">
                     <p>C#</p>
                     <P>Java</p>
                     <p>Python</p>
-		</sidebar-category>
-	         <sidebar-category name="Interests">
-		    <p>Scalability of Services</p>
-		    <p>System Efficiency and Optimization</p>
-		    <p>Music and Visualization</p>
-		    <p>Competitive Programming</p>
-		    <p>Data Structures and Algorithms</p>
-		</sidebar-category>
+                    <p>R</p>
+                </sidebar-category>
+                <sidebar-category name="Interests">
+                    <p>Scalability of Services</p>
+                    <p>System Efficiency and Optimization</p>
+                    <p>Music and Visualization</p>
+                    <p>Competitive Programming</p>
+                    <p>Data Structures and Algorithms</p>
+                </sidebar-category>
                 <sidebar-category name="Coursework">
                     <p>Data Structures and Algorithms</p>
                     <p>Combinatorics & Graph Theory</p>
@@ -54,50 +156,53 @@
                     <p>Competitive Programming</p>
                     <p>Computer Architecture</p>
                 </sidebar-category>
-                
+
             </resume-column>
             <resume-column flex="95">
-              <category name="Professional Experience">
-                <category-item title="Software Engineering Intern" subtitle="Microsoft Corporation;
+                <category name="Professional Experience">
+                    <category-item title="Software Engineering Intern" subtitle="Microsoft Corporation;
                     May '18 - Aug '18">
-  
-                <li>Worked on creating an admin toggle in SharePoint to allow for document chat to be turned off; motivated primarily by complaints of the platform being used for bullying in some academic environments (C#)</li>
-                </category-item>
-                <category-item title="Software Engineering Intern" subtitle="Microsoft Corporation;
+                        <li>Worked on creating an admin toggle in SharePoint to allow for document chat to be turned
+                            off, learned to work with REST API endpoints, as well as learning more about the underlying
+                            flow of information within a large system, particularly one with lots of legacy code;
+                            motivated primarily by complaints of the platform being used for bullying in some
+                            academic environments (C#)</li>
+                    </category-item>
+                    <category-item title="Software Engineering Intern" subtitle="Microsoft Corporation;
                   May '17 - Aug '17">
-
-                <li>Office Product Group - OneDrive eXperiences and Platform, worked on porting the Most Recently Used (MRU) feature to a new architecture, to improve reliability and performance, by creating more robust caching data, as well as reducing query times. (C#)</li>
-                </category-item>
-              </category>
-
-              <category name="Projects">
-		    
-                  <category-item title="CodeForces" subtitle="Solutions to problems hosted on http://codeforces.com/">
-                      <li>Aided my understanding the usage of various data structures and algorithms</li>
-                      <li>Written primarily in Java, updated regularly as new problems are solved</li>
-                  </category-item>
-                  <category-item title="Implementations" subtitle="Java implementations of algorithms and data structures">
-                      <li>KMP, Quicksort, Mergesort, Tries, AVLTrees, just to name a few</li>
-                      <li>Updated as new algorithms and data structures are learned and implemented</li>
-                  </category-item>
-	          <category-item title="SpongeBot" subtitle="A chat bot built for slack">
-		      <li>Intentionally written as a funny pet project, allowed for me to obtain a better understanding of 
-			   how information is interpreted in an event stream model, and how to work with that information</li>
-		  </category-item>
-		   <category-item title="PCS" subtitle="Solutions to problems hosted on https://pcs.cs.cloud.vt.edu/">
-		      <li>Mainly for the purpose of ACM-ICPC preparation</li>
-		      <li>Ranging across many algorithmic and mathematical concepts</li>
-		  </category-item>
-		  <category-item title="ACM Practice" subtitle="Solutions to Problems hosted on https://open.kattis.com/">
-		      <li>Regularly updated as more problems are solved</li>
-		      <li>Includes problems from weekend practices (which deal with concepts ranging from Union-Find to Max Flow)</li>
-		  </category-item>  
-              </category>
-              <category name="Skills">
-                  <category-item title="Languages and Technologies">
-                      <li><strong>Experienced With</strong> Algorithms & Data Structures \ Competitive Programming \ Terminal \ Git \ LaTeX</li>
-                      <li><strong>Operating Systems</strong> Linux (Ubuntu \ Arch \ Debian) \ macOS \ Windows</li>
-                  </category-item>
+                        <li>Office Product Group - OneDrive eXperiences and Platform, worked on porting the Most
+                            Recently Used (MRU) feature to a new architecture, as well as learning to ramp up on a
+                            codebase with legacy code, understanding the ins and outs of data exchange and contracts,
+                            and learning about how SQL is used to transmit and access data to improve reliability and
+                            performance,
+                            by creating more robust caching data, as well as reducing query times. (C#)</li>
+                    </category-item>
+                </category>
+                <category name="Projects">
+                    <category-item title="BibleBot" subtitle="A chat bot built for Discord">
+                        <li>Written as a gag on the request of a friend, morphed into a a pet project which allowed me
+                            to learn usage of the discord python api,
+                            beautiful soup, requests, and understanding the proper forming of async requests, as well
+                            as waiting for their responses.
+                        </li>
+                    </category-item>
+                    <category-item title="SpongeBot" subtitle="A chat bot built for slack">
+                        <li>Intentionally written as a funny pet project, allowed for me to obtain a better
+                            understanding of
+                            how information is interpreted in an event stream model, and how to work with that
+                            information</li>
+                    </category-item>
+                    <category-item title="PCS" subtitle="Solutions to problems hosted on https://pcs.cs.cloud.vt.edu/">
+                        <li>Mainly for the purpose of ACM-ICPC preparation</li>
+                        <li>Ranging across many algorithmic and mathematical concepts</li>
+                    </category-item>
+                </category>
+                <category name="Skills">
+                    <category-item title="Languages and Technologies">
+                        <li><strong>Experienced With</strong> Algorithms & Data Structures \ Competitive Programming \
+                            Terminal \ Git \ LaTeX</li>
+                        <li><strong>Operating Systems</strong> Linux (Ubuntu \ Arch \ Debian \ CentOS) \ macOS \ Windows</li>
+                    </category-item>
             </resume-column>
         </resume-body>
     </resume>
