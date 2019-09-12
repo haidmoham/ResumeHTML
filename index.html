@@ -104,7 +104,7 @@
 
         .resume .main .category-row li,
         .resume .main .category-row p {
-            font-size: smaller
+            font-size: 9.25pt
         }
 
         category:last-of-type category-item:last-of-type .category,
@@ -130,7 +130,7 @@
         <resume-body>
             <resume-column flex="30">
                 <sidebar-category name="Education">
-                    <p>Virginia Tech</p>
+                    <p>Virginia Tech - Bachelor of Science</p>
                     <p>Major in <b>Statistics</b></p>
                     <p>Minor in <b>Computer Science</b></p>
                     <p><b>Expected Graduation</b> Dec 2020</p>
@@ -141,22 +141,22 @@
                     <P>Java</p>
                     <p>Python</p>
                     <p>R</p>
+                    <p>Git</p>
+                    <p>Terminal</p>
+                    <p>PowerShell</p>
+                    <p>LaTeX</p>
                 </sidebar-category>
                 <sidebar-category name="Interests">
                     <p>Scalability of Services</p>
                     <p>System Efficiency and Optimization</p>
-                    <p>Music and Visualization</p>
-                    <p>Competitive Programming</p>
-                    <p>Data Structures and Algorithms</p>
+                    <p>Data Visualization</p>
                 </sidebar-category>
                 <sidebar-category name="Coursework">
                     <p>Data Structures and Algorithms</p>
                     <p>Competitive Programming</p>
                     <p>Computer Architecture</p>
                     <p>Combinatorics & Graph Theory</p>
-                    <p>Introduction to Proofs</p>
                     <p>Experimental Design</p>
-                    <p>Theoretical Statistics</p>
                 </sidebar-category>
 
             </resume-column>
@@ -166,41 +166,42 @@
                     May '18 - Aug '18">                        
                         <li>Motivated by concerns of user privacy within tenants, and concerns of bullying in school use cases</li>
                         <li>Developed an admin toggle in SharePoint to allow for document chat to be toggled</li>
-                        <li>Learned to work with REST endpoints, understanding flow of information, and systems with legacy code</li>
+                        <li>Learned to work with REST endpoints, understanding flow of information, and systems complex pre-existing systems</li>
                         <li>Used primarily C#</li>
                     </category-item>
                     <category-item title="Software Engineering Intern" subtitle="Microsoft Corporation;
                   May '17 - Aug '17">
                         <li>Ported the Most Recently Used (MRU) documents feature to a new architecture, improving read/write performance</li>
-                        <li>Learned to ramp up on code bases with legacy code</li>
                         <li>Learned to understand the ins and outs of data exchange and data contracts</li>
-                        <li>Became more aware of optimizing around reducing SQL queries, to allow for better performance and reliability via caching</li>
+                        <li>Utilized caching to reduce SQL queries, to allow for better performance and reliability</li>
                         <li>Used primarily C#</li>
                     </category-item>
                 </category>
                 <category name="Projects">
                     <category-item title="Anilist Python API Wrapper" subtitle="(In Progress)">
-                            <li>Developing a python wrapper for the Anilist GraphQL API</li>
-                            <li>Intended to allow easier querying of anime and manga related data</li>
+                            <li>Developing a Python wrapper for the Anilist GraphQL API</li>
+                            <li>Intended to allow easier querying by creating a Python library for executing lengthy but similar GraphQL queries as function calls</li>
+                            <li>Use the requests and json Python packages to allow for querying of the GraphQL database, storing results in json, and returning them as strings</li>
                             <li>Data includes but is not limited to: ratings, genres, titles, release period, and staff</li>
                     </category-item>
                     <category-item title="Python Music Visualizer" subtitle="(In Progress)">
-                            <li>Using Python OpenGL libraries in conjunction with Numpy to create real time music visualizations</li>
+                            <li>Using Python OpenGL libraries in conjunction with NumPy to create real time music visualizations</li>
                             <li>Focused on taking microphone input and transforming it into frequency data using fourier transforms, 
-                                then influencing surface shapes with frequency data</li>
+                                then influencing surface shapes with frequency data, and updating them in real time, locally, with PyOpenGL and PyQTGraph</li>
+                    </category-item>
+                    <category-item title="BibleBot" subtitle="">
+                            <li>Used requests and BeautifulSoup to scrape a pre-existing webpage, allowing the user to retreive a random bible verse</li>
+                            <li>Learned how to use DiscordPy and the async Python decorator to allow for processes to wait for other information</li>
                     </category-item>
                     <category-item title="Discord Community Management" subtitle="">
-                            <li>Created and grew a resource centric discord community for a popular MMORPG.</li>
-                            <li>Scaled from no members to roughly 10,000 members </li>
-                            <li>Currently maintaining resources that are relevant and up-to-date with in-game updates</li>
+                        <li>Created and grew a resource centric discord community for a popular MMORPG.</li>
+                        <li>Scaled to over 8000 members </li>
+                        <li>Currently maintaining resources that are relevant and up-to-date with in-game updates</li>
                     </category-item>
                 </category>
-                <category name="Skills">
-                    <category-item title="Technologies">
-                        <li><strong>Technologies</strong> SourceDepot \ PowerShell \
-                            Terminal \ Git \ LaTeX</li>
-                        <li><strong>Operating Systems</strong> Linux (Ubuntu \ Debian \ CentOS) \ macOS \ Windows</li>
-                    </category-item>
+                <category name="">
+                    
+                </category>
             </resume-column>
         </resume-body>
     </resume>
